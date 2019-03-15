@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>{{ title }}</title>
+      <link rel="stylesheet" href="/stylesheets/product.css">
+  </head>
+  <body>
+    <h1>LINUX mini project</h1>
+      <h3>Starters</h3>
+      <div class="flex-container">
+          {{# each items }}
+              <article class="item" style ="margin:10px;">
+                  <div><img src="{{this.Image}}" style="width:150px;height:150px;"></div>
+                  <div>Name: {{ this.Name }}</div>
+                  <div>Discription: {{ this.Discription }}</div>
+              </article>
+          {{/each}}
+      </div>
+</body>
+</html>
