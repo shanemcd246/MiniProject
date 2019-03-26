@@ -1,0 +1,25 @@
+UID,Type,Name,Discription,Price,Contains,Image
+2,Starter,salad,green,4.95,Tomato&Lettuce,https://www.tasteofhome.com/wp-content/uploads/2017/10/exps6498_MRR133247D07_30_5b_WEB-2.jpg
+3,Main,Chicken,meat,7.65,Chicken,https://www.yellowblissroad.com/wp-content/uploads/2015/07/lemon-chicken-fb.jpg
+4,Desert,ice-cream,cold,3.5,Milk,https://www.seriouseats.com/2018/06/20180625-no-churn-vanilla-ice-cream-vicky-wasik-13-1500x1125.jpg
+5,Starter,China Garden Platter,"Spring roll, BBQ ribs, skewered satay chicken & wonton",10,Meat,https://ladieswholunchinsurrey.files.wordpress.com/2015/11/dsc_2275.jpg
+6,Starter,Crispy Spring Rolls (2),Served with sweet & sour sauce,3,Meat,http://d2gtpjxvvd720b.cloudfront.net/system/recipe/image/1925/default_hungry-girls-healthy-ez-baked-egg-rolls-recipe-20160909-1722-19204-0017.jpg
+7,Starter,Crispy Vegetable Spring Roll (2),Served with sweet & sour sauce,3,Vegetables,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtULUA4LqfIi9mwvnUDJuBPhFpKCYGwZ5DW7jP9zjQyJQyckiP
+8,Starter,Crispy Chicken Cheese Roll (2),Served with sweet & sour sauce,4,Chicken,https://assets.betterbutter.in/386x386/tarannum-malik20160927235046555.jpg
+9,Starter,Chicken Balls (8),Served with sweet & sour sauce,5,Chicken,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSe9wjBJiR9VlV_Z9FzyFUO1s9d1XMHK7xNHkpTAif624UEJIx
+10,Starter,Samosa (8),Minced beef with curry wrapped in pastry,5,Beef,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN97xkCCHCh08GtD0lGtGMiw4A5xRiFMPbCfplMwGkl9YA3nTQ
+11,Starter,Spare ribs with Sauce,BBQ or Sweet Chilli,6,Pork,https://foodsogoodmall.com/wp-content/uploads/2013/08/Spicy-Chinese-Hot-Wings2-1000x500.jpg
+12,Starter,Chicken Sweetcorn Soup,"Eggs, Tick soup",3,Soup,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUR9RuCxtzoc7PdDIQx7xT7XU9mMvzmlXIGH2L3tDTQzmewfCY
+13,Stater,Chicken noodles Soup,Clear soup,3,Soup,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX91FxcDfoDyPqNusr0AcWN25oT4LWHdbxbVMomLDFOWCrcwXkUg
+14,Starter,Wonton Soup,Clear Soup,3.5,Soup,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu_UnlLRRe00bhDzP2UHb_FQf99-BuOwkNoFu1mkC9YnO1URTd_w
+15,Main,Soo Chow Duck,"Crustaceans, Roast duck spread on stir fr vegetables, chicken & king prawn in BBQ sauce",10.5,Duck,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmZFKaoqHUQIirBi5McY5SkFloYi49l2AoLvBUhxRodnf2A9pxZw
+16,Main,BBQ Pork & Chicken,Bean sprouts with BBq sauce ,9.3,Meat,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnq1gwM8FfJLmwUqnKdySGvl3tHxwO12N2D8jiJUxt_0t0dJDv
+17,Main,Singaore Satay Chicken ,"Peanuts. Crispy chicken, green peppers, mushroom, onions in Singapore satay sauce",9.3,Chicken,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTkCJACsD9C6L2ke8a-NsFN9Wtl7zOURExDnxwmvGJjkSsL0k3
+18,Main,Chicken Curry,"Milk, gluten, crustaceans",8,Chicken,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtS_y7lvEJMSMR4WMi0Lzu0QilM590wgI0sbd2t2h2reFqBBZUGQ
+19,Main,Beef Curry,"Milk, gluten, crustaceans",8,Beef,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4Zfp5Ipt2l_3GDH2ccV-fKRhtgkMXP22YpjATU45croAKOnIHsw
+20,Main,Seafood Curry,"Milk, gluten, crustaceans",10.5,Fish,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI9UcNZcduR4oGuzosrJ9kyQ5Clcrx54jPaLT2GUBANzW-_QrXPQ
+21,Main,Vegetable Curry,"Milk, gluten, crustaceans",7,Vegetables,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXSwZywFFKb-7T1Ja_Exs-60v4jBc8KLZFyxTlGx1HNW-l6hSk
+22,Desert,Fried Cheese Cake,"Cheese cake wraps with cinamon, suar dusting, topped with raspberry sauce",6.5,Dairy,https://www.orchid-restaurant.com/wp-content/uploads/2013/08/Desserts-940x360.png
+23,Desert,Warm Apple Crumbel,Served with vanila ice-cream,6.5,Dairy,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxrDp7lVAA--INjaAUaN9hEMiutzQK89PYjC6lrFPIejoIgMTEVA
+24,Desert,Chocolate Brownie,Served with vanila ice-cream,6.5,Dairy,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSSxSP_3qHlyB-dxUUmBIdfazV7ENhvYs68__eoi9jBNDGcWJfNQ
+25,Desert,Melt in the middle chocolate Fondant,Served with vanila ice-cream,7.5,Dairy,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCJp88_WKrlTNU-mCN2fDHFUQoHt2gf71FonZR7fNgXB_V_dWK

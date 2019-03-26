@@ -29,5 +29,17 @@ router.get('/products', function(req, res, next) {
         console.log(doc);
       });
 });
+router.get('/add-to-cart/:id', function(req, res, next) {
+  var productID = req.params.id;
+  var shopingCart = new shopingCart(req.session.cart ? req.session.cart :{})
+
+  Product.findByID(productId,function(err,product){
+    if(err){
+      return res.redirect('/');
+    }
+    shopingCart.add(product,product.id);
+    req
+  })
+});
 
 module.exports = router;

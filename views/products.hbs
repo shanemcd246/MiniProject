@@ -4,18 +4,123 @@
       <meta charset="UTF-8">
       <title>{{ title }}</title>
       <link rel="stylesheet" href="/stylesheets/product.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <style>
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width:100vh;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
   </head>
   <body>
     <h1>LINUX mini project</h1>
-      <h3>Starters</h3>
-      <div class="flex-container">
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Recomended</button>
+      <div id="myDropdown1" class="dropdown-content">
+        <div class="flex-container">
           {{# each items }}
-              <article class="item" style ="margin:10px;">
-                  <div><img src="{{this.Image}}" style="width:150px;height:150px;"></div>
-                  <div>Name: {{ this.Name }}</div>
-                  <div>Discription: {{ this.Discription }}</div>
-              </article>
+          <article class="item" style ="margin:10px;">
+            <div><img src="{{this.Image}}" style="width:150px;height:150px;"></div>
+            <div>Name: {{ this.Name }}</div>
+            <div>Discription: {{ this.Discription }}</div>
+            <button onclick="myFunction(1)" class="dropbtn">Recomended</button>
+            <div id="miniDropdown" class="dropdown-content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            </div>
+          </article>
           {{/each}}
+        </div>
       </div>
-</body>
+    </div>
+    <div class="dropdown">
+      <button onclick="myFunction(2)" class="dropbtn">Starters</button>
+      <div id="myDropdown2" class="dropdown-content">
+        <div class="flex-container">
+          {{# each items }}
+          <article class="item" style ="margin:10px;">
+            <div><img src="{{this.Image}}" style="width:150px;height:150px;"></div>
+            <div>Name: {{ this.Name }}</div>
+            <div>Discription: {{ this.Discription }}</div>
+          </article>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button onclick="myFunction(3)" class="dropbtn">Main</button>
+      <div id="myDropdown3" class="dropdown-content">
+        <div class="flex-container">
+          {{# each items }}
+          <article class="item" style ="margin:10px;">
+            <div><img src="{{this.Image}}" style="width:150px;height:150px;"></div>
+            <div>Name: {{ this.Name }}</div>
+            <div>Discription: {{ this.Discription }}</div>
+          </article>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button onclick="myFunction(4)" class="dropbtn">Desert</button>
+      <div id="myDropdown4" class="dropdown-content">
+        <div class="flex-container">
+          {{# each items }}
+          <article class="item" style ="margin:10px;">
+            <div><img src="{{this.Image}}" style="width:150px;height:150px;"></div>
+            <div>Name: {{ this.Name }}</div>
+            <div>Discription: {{ this.Discription }}</div>
+          </article>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+
+      <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction(int a) {
+          document.getElementById("myDropdown"+a).classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+
+      </script>
+    </body>
 </html>
