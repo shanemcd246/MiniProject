@@ -2,231 +2,166 @@
 <html lang="en">
   <head>
       <meta charset="UTF-8">
-      <title>{{ title }}</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="/stylesheets/product.css">
-
-      <style>
-.dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: rgba(255, 255, 255, 1);
-  width:100vw;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-
-#navbar {
-  overflow: hidden;
-  background-color: #333;
-}
-
-#navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-#navbar a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.content {
-  padding: 16px;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 60px;
-}
-.sidenav {
-height: 100%;
-width: 0;
-position: fixed;
-z-index: 1;
-top: 0;
-left: 0;
-background: rgba(255, 255, 255, 0.7);
-overflow-x: hidden;
-transition: 0.5s;
-padding-top: 60px;
-}
-
-.sidenav a {
-padding: 8px 8px 8px 32px;
-text-decoration: none;
-font-size: 25px;
-color: Black;
-display: block;
-transition: 0.3s;
-opacity: 1;
-}
-
-.sidenav a:hover {
-color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-position: absolute;
-top: 0;
-right: 25px;
-font-size: 36px;
-margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-.sidenav {padding-top: 15px;}
-.sidenav a {font-size: 18px;}
-}
-
-</style>
+      <title>{{ title }}</title>
   </head>
   <body>
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="http://localhost:8000/products">Menu</a>
-      <a href="#">Our Story</a>
-      <a href="#">Gallery</a>
-      <a href="#">Reviews</a>
-      <a href="#">Contact</a>
-      <a href="#">Book A Table</a>
-      <a href="#"><img src="images/Home/facebook.png" width="25%" height="25%" title="Facebook" alt="linkIt"></a>
-      <a href="#"><img src="images/Home/instagram.png" width="25%" height="25%" title="Instagram" alt="linkIt"></a>
+      <a href="/products">Menu</a>
+      <a href="/story">Our Story</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/reviews">Reviews</a>
+      <a href="/contactus">Contact</a>
+      <a href="/booking">Book A Table</a>
+      <a href="http://facebook.com/profile.php?=733"><img src="images/Home/facebook.png" width="30%" height="30%" title="Facebook" alt="linkIt"></a>
+      <a href="https://www.instagram.com/ayshanfuhdi/?hl=en"><img src="images/Home/instagram.png" width="30%" height="30%" title="Instagram" alt="linkIt"></a>
     </div>
-    <span style="font-size:40px;cursor:pointer" onclick="openNav()">&#9776; See More</span>
+    <img id="moreIcon" src="images/Home/more.png" onclick="openNav()"></a>
     <br>
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">Recomended</button>
-      <div id="myDropdown" class="dropdown-content">
-        <div class="flex-container">
-          {{# each items }}
-          <article class="item" style ="margin:10px;">
-            <div><img src="{{this.Image}}" style="width:150px;height:150px;"></div>
-            <div>Name: {{ this.Name }}</div>
-            <div>Discription: {{ this.Discription }}</div>
-            <button onclick="myInfoFunction()" class="dropbtn">More Info</button>
-            <div id="myInfoDropdown" class="dropdown-content">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    <div class="Productcontainer" style="display: flex;flex-direction:row;align-items:center;justify-content: center;">
+      <div class="dropdown">
+        <button onclick="RecomendedFunction()" class="dropbtn">Recomended</button>
+        <div id="RDropdown" class="dropdown-content">
+          <div class="flex-container">
+              {{# each recomended }}
+                <article class="item" style ="margin:10px;word-wrap: break-word;">
+                  <div><img src="{{this.Image}}" style="width:150px;height:150px;"></div>
+                  <div>{{ this.Name }}</div>
+                  <div>€{{ this.Price }}</div>
+                  <details>
+                    <summary style="word-wrap: break-word;"></summary>
+                    <div>{{ this.Description}}</div>
+                    <div>Contains: {{ this.Contains}}</div>
+                  </details>
+                </article>
+              {{/each}}
+          </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button onclick="StartersFunction()" class="dropbtn">Starters</button>
+          <div id="SDropdown" class="dropdown-content">
+            <div class="flex-container">
+              {{# each starter }}
+                <article class="item" style ="margin:10px;word-wrap: break-word;">
+                  <div><img src="{{this.Image}}" style="width:150px;height:150px;"></div>
+                  <div>{{ this.Name }}</div>
+                  <div>€{{ this.Price }}</div>
+                  <details>
+                    <summary></summary>
+                    <div>{{ this.Description}}</div>
+                    <div>Contains: {{ this.Contains}}</div>
+                  </details>
+                </article>
+              {{/each}}
             </div>
-          </article>
-          {{/each}}
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">Starters</button>
-      <div id="myDropdown" class="dropdown-content">
-        <div class="flex-container">
-          {{# each items }}
-          <article class="item" style ="margin:10px;">
-            <div><img src="{{this.Image}}" style="width:150px;height:150px;"></div>
-            <div>Name: {{ this.Name }}</div>
-            <div>Discription: {{ this.Discription }}</div>
-          </article>
-          {{/each}}
+        <div class="dropdown">
+          <button onclick="MainFunction()" class="dropbtn">Main</button>
+          <div id="MDropdown" class="dropdown-content">
+            <div class="flex-container">
+              {{# each main }}
+                <article class="item" style ="margin:10px;word-wrap: break-word;">
+                  <div><img src="{{this.Image}}" style="width:150px;height:150px;"></div>
+                  <div>{{ this.Name }}</div>
+                  <div>€{{ this.Price }}</div>
+                  <details>
+                    <summary></summary>
+                    <div>{{ this.Description}}</div>
+                    <div>Contains: {{ this.Contains}}</div>
+                  </details>
+                </article>
+              {{/each}}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">Main</button>
-      <div id="myDropdown" class="dropdown-content">
-        <div class="flex-container">
-          {{# each items }}
-          <article class="item" style ="margin:10px;">
-            <div><img src="{{this.Image}}" style="width:150px;height:150px;"></div>
-            <div>Name: {{ this.Name }}</div>
-            <div>Discription: {{ this.Discription }}</div>
-          </article>
-          {{/each}}
+        <div class="dropdown">
+          <button onclick="DesertFunction()" class="dropbtn">Desert</button>
+          <div id="DDropdown" class="dropdown-content">
+            <div class="flex-container">
+              {{# each desert }}
+                <article class="item" style ="margin:10px;word-wrap: break-word;">
+                  <div><img src="{{this.Image}}" style="width:150px;height:150px;"></div>
+                  <div>{{ this.Name }}</div>
+                  <div>€{{ this.Price }}</div>
+                  <details>
+                    <summary></summary>
+                    <div>{{ this.Description}}</div>
+                    <div>Contains: {{ this.Contains}}</div>
+                  </details>
+                </article>
+              {{/each}}
+            </div>
+          </div>
         </div>
+        <br>
+        <a href="http://localhost:8000/contactus"><img src="/images/Other/cornerDogOnPhone.png" style="width:10%;height:12%;position: fixed;right: 0;bottom:0;"></a>
+        <a href="http://localhost:8000/"><img src="images/Home/logo.png" style="width:10%;height:12%;position: fixed;right: 0;top:0;"></a>
+        <a href="path_to_file" download="/files/Menu.pdf"><img src="images/Other/download.png" style="width:10%;height:10%;position: fixed;left: 0;bottom:0;"></a>
       </div>
-    </div>
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">Desert</button>
-      <div id="myDropdown" class="dropdown-content">
-        <div class="flex-container">
-          {{# each items }}
-          <article class="item" style ="margin:10px;">
-            <div><img src="{{this.Image}}" style="width:150px;height:150px;"></div>
-            <div>Name: {{ this.Name }}</div>
-            <div>Discription: {{ this.Discription }}</div>
-          </article>
-          {{/each}}
-        </div>
-      </div>
-    </div>
-
       <script>
-      ///////////// Sticky Nav Bar /////////////////////////////////////
-      window.onscroll = function() {myStickyFunction()};
-      var navbar = document.getElementById("navbar");
-      var sticky = navbar.offsetTop;
-      function myStickyFunction() {
-        if (window.pageYOffset >= sticky) {
-          navbar.classList.add("sticky")
-        }
-        else {
-          navbar.classList.remove("sticky");
-        }
-      }
-      ////////////////////////////////////////////////////////////////
       //////////////////// Drop Down Menus ///////////////////////////
-        function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
+        function RecomendedFunction() {
+          closeNav();
+          if (document.getElementById("RDropdown").style.display === "block") {
+            document.getElementById("RDropdown").style.display ="none";
+          } else {
+            document.getElementById("RDropdown").style.display ="block";
+          }
+          document.getElementById("SDropdown").style.display ="none";
+          document.getElementById("MDropdown").style.display="none";
+          document.getElementById("DDropdown").style.display="none";
         }
-        function myInfoFunction() {
-          document.getElementById("myInfoDropdown").classList.toggle("show");
+        function StartersFunction() {
+          closeNav();
+          document.getElementById("RDropdown").style.display="none";
+          if (document.getElementById("SDropdown").style.display === "block") {
+            document.getElementById("SDropdown").style.display ="none";
+          } else {
+            document.getElementById("SDropdown").style.display ="block";
+          }
+          document.getElementById("MDropdown").style.display="none";
+          document.getElementById("DDropdown").style.display="none";
         }
-
-        // Close the dropdown if the user clicks outside of it
+        function MainFunction() {
+          closeNav();
+          document.getElementById("RDropdown").style.display="none";
+          document.getElementById("SDropdown").style.display="none";
+          if (document.getElementById("MDropdown").style.display === "block") {
+            document.getElementById("MDropdown").style.display ="none";
+          } else {
+            document.getElementById("MDropdown").style.display ="block";
+          }
+          document.getElementById("DDropdown").style.display="none";
+        }
+        function DesertFunction() {
+          closeNav();
+          document.getElementById("RDropdown").style.display="none";
+          document.getElementById("SDropdown").style.display="none";
+          document.getElementById("MDropdown").style.display="none";
+          if (document.getElementById("DDropdown").style.display === "block") {
+            document.getElementById("DDropdown").style.display ="none";
+          } else {
+            document.getElementById("DDropdown").style.display ="block";
+          }
+        }
         function openNav() {
           document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("RDropdown").style.display="none";
+          document.getElementById("SDropdown").style.display="none";
+          document.getElementById("MDropdown").style.display="none";
+          document.getElementById("DDropdown").style.display ="none";
+          if(screen.width <= 650){
+            document.getElementById("mySidenav").style.width = "40%";
+          }
+          else{
+            document.getElementById("mySidenav").style.width = "20%";
+          }
+          document.getElementById("moreIcon").style.display = "none";
         }
-
         function closeNav() {
           document.getElementById("mySidenav").style.width = "0";
         }

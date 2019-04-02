@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="/stylesheets/product.css">
+      <title>{{ title }}</title>
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="/products">Menu</a>
+      <a href="/story">Our Story</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/reviews">Reviews</a>
+      <a href="/contactus">Contact</a>
+      <a href="/booking">Book A Table</a>
+      <a href="http://facebook.com/profile.php?=733"><img src="images/Home/facebook.png" width="30%" height="30%" title="Facebook" alt="linkIt"></a>
+      <a href="https://www.instagram.com/ayshanfuhdi/?hl=en"><img src="images/Home/instagram.png" width="30%" height="30%" title="Instagram" alt="linkIt"></a>
+    </div>
+    <img id="moreIcon" src="images/Home/more.png" onclick="openNav()"></a>
+    <div class="flex-container" style="display: flex;width:70%;height:30%;flex-direction:column;align-items:center;">
+        <form action="/action_page.php">
+          Name: <input type="text" name="fname" value=""><br>
+          Time: <input type="text" name="time" value=""><br>
+          Number Of Gusts: <input type="text" name="guests" value=""><br>
+          Special Requirments: <input type="text" name="requirments" value=""><br>
+          <input type="reset" value="Submit">
+        </form>
+    </div>
+    <div class="mapouter">
+      <div class="gmap_canvas">
+        <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=GMIT&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+        </iframe>
+        <a href="https://www.emojilib.com">emojilib.com</a>
+      </div>
+      <style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}
+      </style>
+    </div>
+
+
+    <script>
+      ///////////// Sticky Nav Bar /////////////////////////////////////
+      function openNav() {
+        if(screen.width <= 650){
+          document.getElementById("mySidenav").style.width = "40%";
+        }
+        else{
+          document.getElementById("mySidenav").style.width = "20%";
+        }
+        document.getElementById("moreIcon").style.display = "none";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+  </body>
+</html>

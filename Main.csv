@@ -1,7 +1,9 @@
 Type,Name,Description,Price,Contains,Image
-Main,,,,,
-Main,,,,,
-Main,,,,,
-Main,,,,,
-Main,,,,,
-Main,,,,,
+Main,Chicken,Breaded Half Chicken,7.65,meat,/images/Main/m02.jpg
+Main,Soo Chow Duck,Chinese Style slow cooked Duck,10.5,"Crustaceans, Roast duck spread on stir fr vegetables, chicken & king prawn in BBQ sauce",/images/Main/m03.jpg
+Main,BBQ Pork & Chicken,Quality pork and Chicken in our house special sauce,9.3,Bean sprouts with BBq sauce ,/images/Main/m04.jpg
+Main,Singaore Satay Chicken ,"Crispy chicken, green peppers, mushroom, onions in Singapore satay sauce",9.3,Peanuts.  sauce,/images/Main/m05.jpg
+Main,Chicken Curry,Our famous house curry with chicken,8,"Milk, gluten, crustaceans",/images/Main/m06.jpg
+Main,Beef Curry,Our famous house curry with Beef,8,"Milk, gluten, crustaceans",/images/Main/m07.jpg
+Main,Seafood Curry,Our famous house curry with Seafood,10.5,"Milk, gluten, crustaceans",/images/Main/m08.jpg
+Main,Vegetable Curry,Our famous house curry with Veetable,7,"Milk, gluten, crustaceans",/images/Main/m09.jpg

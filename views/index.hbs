@@ -3,123 +3,48 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="/stylesheets/product.css">
       <title>{{ title }}</title>
-      <style>
-        body {
-          padding: 50px;
-          font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-          background-image: url('https://media.giphy.com/media/JyskkePkMKt7a/giphy.gif');
-          background-size: cover;
-          height: 100vh;
-          padding:0;
-          margin:0;
-        }
-        .sidenav {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background: rgba(255, 255, 255, 0.5);
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-      }
-
-      .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: Black;
-        display: block;
-        transition: 0.3s;
-        opacity: 1;
-      }
-
-      .sidenav a:hover {
-        color: #f1f1f1;
-      }
-
-      .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-      }
-
-      @media screen and (max-height: 450px) {
-        .sidenav {padding-top: 15px;}
-        .sidenav a {font-size: 18px;}
-      }
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////l */
-        /* Slideshow container */
-        .cLogo {
-          width: 40%;
-          height: 40%;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          margin-right: -50%;
-          transform: translate(-50%, -50%);
-
-        }
-      </style>
   </head>
   <body>
+    <div class="crossfade">
+      <figure></figure>
+      <figure></figure>
+      <figure></figure>
+      <figure></figure>
+      <figure></figure>
+    </div>
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="http://localhost:8000/products">Menu</a>
-      <a href="#">Our Story</a>
-      <a href="#">Gallery</a>
-      <a href="#">Reviews</a>
-      <a href="#">Contact</a>
-      <a href="#">Book A Table</a>
-      <a href="#"><img src="images/Home/facebook.png" width="15%" height="15%" title="Facebook" alt="linkIt"></a>
-      <a href="#"><img src="images/Home/instagram.png" width="15%" height="15%" title="Instagram" alt="linkIt"></a>
+      <a href="/products">Menu</a>
+      <a href="/story">Our Story</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/reviews">Reviews</a>
+      <a href="/contactus">Contact</a>
+      <a href="/booking">Book A Table</a>
+      <a href="http://facebook.com/profile.php?=733"><img src="images/Home/facebook.png" width="30%" height="30%" title="Facebook" alt="linkIt"></a>
+      <a href="https://www.instagram.com/ayshanfuhdi/?hl=en"><img src="images/Home/instagram.png" width="30%" height="30%" title="Instagram" alt="linkIt"></a>
     </div>
-    <span style="font-size:40px;cursor:pointer" onclick="openNav()">&#9776; See More</span>
-    <div class="cLogo">
-      <img src="images/Home/logo.png" style="width:100%;height:100%">
+    <img id="moreIcon" src="images/Home/more.png" onclick="openNav()"></a>
+    <div class="nflex-container">
+      <img src="images/Home/logo.png">
     </div>
 
     <script>
     ///////////// Sticky Nav Bar /////////////////////////////////////
     function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
+      if(screen.width <= 650){
+        document.getElementById("mySidenav").style.width = "40%";
+      }
+      else{
+        document.getElementById("mySidenav").style.width = "20%";
+      }
+      document.getElementById("moreIcon").style.display = "none";
     }
-
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("moreIcon").style.display = "block";
     }
-
-      var slideIndex = 1;
-      showSlides(slideIndex);
-
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-      }
     </script>
   </body>
 </html>

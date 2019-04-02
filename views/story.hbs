@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/stylesheets/product.css">
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="/products">Menu</a>
+      <a href="/story">Our Story</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/reviews">Reviews</a>
+      <a href="/contactus">Contact</a>
+      <a href="/booking">Book A Table</a>
+      <a href="http://facebook.com/profile.php?=733"><img src="images/Home/facebook.png" width="30%" height="30%" title="Facebook" alt="linkIt"></a>
+      <a href="https://www.instagram.com/ayshanfuhdi/?hl=en"><img src="images/Home/instagram.png" width="30%" height="30%" title="Instagram" alt="linkIt"></a>
+    </div>
+    <img id="moreIcon" src="images/Home/more.png" onclick="openNav()"></a>
+    <br>
+    <img src="images/Other/people.jpg" alt="HTML5 Icon" style="float:right;width:40%;height:40%;">
+
+    <h1 style="text-align: center; font-size:300%;"><i>About Us</i></h1>
+
+    <p style="text-align: center;font-size:140%;">Our goal is to remain real and authentic by honouring the thousand year old culture and taste of Xi’An. Xi’An is
+    one of the oldest cities in China and as the starting of Silk Road has had years of culture and time to perfect its unique foods and flavours. We are
+    recreating these great flavours every day with our unique Chinese dishes.</p>
+
+    <h1 style="text-align: center; font-size:300%;"><i>Our Beliefs</i></h1>
+
+    <p style="text-align: center; font-size:140%;">We believe in real food and real flavours. All of our dishes are cooked to order with fresh ingredients and no artificial flavouring.
+    In our dishes you will taste a rich mix of herbs and spices but what you will not taste is MSG, our food can stand on its own feet. We understand that food should taste good and be
+    good for you, so we use only the finest ingredients, 100% Irish beef,
+     Halal chicken and Halal beef so that our food can be enjoyed by all.</p>
+
+    <h1 style="text-align: center; font-size:300%;"><i>A Bite of China</i></h1>
+
+    <p style="text-align: center; font-size:140%;">The menu includes meat burger (known as Roujiamo), which is like a hamburger, but with a much longer history.
+    Roujiamo could be the world’s sandwich or hamburger since this bread dates back to the Qin Dynasty and the meat to the Zhou Dynasty. There are just two
+    elements — baked leavened bread and shredded braised meat. A good Chinese burger (jiamo) should be baked using a traditional furnace instead of an electric oven.
+    Lean pork will be braised for hours – then hand-shredded and pocketed in the bread. Another menu highlight is Biang Biang noodles, this is a very interesting and
+     popular dish in Shaanxi province. This is where it all began! Biang Biang noodles are named after the sound made when the large belt-like noodle dough is slapped against
+     the counter as they are pulled. The result is an extremely long, thick noodle topped with chili, pork and vegetables like carrots, potato and greens. Don’t forget
+     your camera as it’s likely the longest noodle you’ll ever have! This is like food theatre, as you can watch them being made.
+    Chinese food historian and author, Andrew Coe once described Xi’An regional fare as representing the wave of the future in Chinese food.” With
+    Anthony Bourdain a fan, Xi’An food is sure to set the standard for Chinese food in the west</p>
+
+    <img src="images/Other/Food_pic1.jpg" alt="HTML5 Icon" style="float:left;width:30%;height:30%;">
+    <h1 style="text-align: center; font-size:300%;"><i>Enjoy your Meal</i></h1>
+
+  </body>
+  <script>
+    ///////////// Sticky Nav Bar /////////////////////////////////////
+    function openNav() {
+      if(screen.width <= 650){
+        document.getElementById("mySidenav").style.width = "40%";
+      }
+      else{
+        document.getElementById("mySidenav").style.width = "20%";
+      }
+      document.getElementById("moreIcon").style.display = "none";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+</html>
