@@ -200,48 +200,11 @@ margin-left: 50px;
 .contacts-container div{
     background-color: rgba(201, 76, 76, 0.6);
 }
-.starRating:not(old){
-  display        : inline-block;
-  width          : 7.5em;
-  height         : 1.5em;
-  overflow       : hidden;
-  vertical-align : bottom;
-}
-
-.starRating:not(old) > input{
-  margin-right : -100%;
-  opacity      : 0;
-}
-
-.starRating:not(old) > label{
-  display         : block;
-  float           : right;
-  position        : relative;
-  background      : url('images/Other/star-off.svg');
-  background-size : contain;
-}
-
-.starRating:not(old) > label:before{
-  content         : '';
-  display         : block;
-  width           : 1.5em;
-  height          : 1.5em;
-  background      : url('images/Other/star-on.svg');
-  background-size : contain;
-  opacity         : 0;
-  transition      : opacity 0.2s linear;
-}
-
-.starRating:not(old) > label:hover:before,
-.starRating:not(old) > label:hover ~ label:before,
-.starRating:not(:hover) > :checked ~ label:before{
-  opacity : 1;
-}
 
 #commentscontainer {
   display: flex;
   flex-wrap: wrap;
-  background: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, .4);
 }
 
 
@@ -289,7 +252,40 @@ margin-left: 50px;
 
 .flex-container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  width:50%
-  background: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, .4);
+}
+#pList{
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+  width: 50%;
+  font-size: 4vw;
+}
+#DDlist{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction:row;
+  margin: 10vw;
+  background: rgba(255, 255, 255, .4);
+  width: 25%;
+  height: 25%;
+}
+#Pd {
+  word-wrap: break-word;
+}
+
+#RDropdown{
+  display: none;
+  flex-direction:row;
+  position: fixed;
+  background-color: rgba(201, 76, 76, 0.6);
+  left: 0;
+  right: 0;
+  width: 100vw;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }

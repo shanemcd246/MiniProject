@@ -5,6 +5,13 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="/stylesheets/product.css">
       <title>{{ title }}</title>
+      <style>
+      body {
+        background-image: url("images/Other/prodBg.jpg");
+        background-size: cover;
+      }
+      </style>
+
   </head>
   <body>
     <div id="mySidenav" class="sidenav">
@@ -14,30 +21,30 @@
       <a href="/gallery">Gallery</a>
       <a href="/reviews">Reviews</a>
       <a href="/contactus">Contact</a>
-      <a href="/booking">Book A Table</a>
       <a href="http://facebook.com/profile.php?=733"><img src="images/Home/facebook.png" width="30%" height="30%" title="Facebook" alt="linkIt"></a>
       <a href="https://www.instagram.com/ayshanfuhdi/?hl=en"><img src="images/Home/instagram.png" width="30%" height="30%" title="Instagram" alt="linkIt"></a>
     </div>
     <img id="moreIcon" src="images/Home/more.png" onclick="openNav()"></a>
     <br>
+    <br>
     <div class="Productcontainer" style="display: flex;flex-direction:row;align-items:center;justify-content: center;">
       <div class="dropdown">
         <button onclick="RecomendedFunction()" class="dropbtn">Recomended</button>
-        <div id="RDropdown" class="dropdown-content">
-          <div class="flex-container">
+          <div id="RDropdown" class="dropdown-content">
+            <div class="flex-container">
               {{# each recomended }}
                 <article class="item" style ="margin:10px;word-wrap: break-word;">
                   <div><img src="{{this.Image}}" style="width:150px;height:150px;"></div>
                   <div>{{ this.Name }}</div>
                   <div>€{{ this.Price }}</div>
                   <details>
-                    <summary style="word-wrap: break-word;"></summary>
+                    <summary></summary>
                     <div>{{ this.Description}}</div>
                     <div>Contains: {{ this.Contains}}</div>
                   </details>
                 </article>
               {{/each}}
-          </div>
+            </div>
           </div>
         </div>
         <div class="dropdown">
@@ -98,8 +105,8 @@
           </div>
         </div>
         <br>
-        <a href="http://localhost:8000/contactus"><img src="/images/Other/cornerDogOnPhone.png" style="width:10%;height:12%;position: fixed;right: 0;bottom:0;"></a>
-        <a href="http://localhost:8000/"><img src="images/Home/logo.png" style="width:10%;height:12%;position: fixed;right: 0;top:0;"></a>
+        <a href="/contactus"><img src="/images/Other/cornerDogOnPhone.png" style="width:10%;height:12%;position: fixed;right: 0;bottom:0;"></a>
+        <a href="/"><img src="images/Home/logo.png" style="width:10%;height:12%;position: fixed;right: 0;top:0;"></a>
         <a href="path_to_file" download="/files/Menu.pdf"><img src="images/Other/download.png" style="width:10%;height:10%;position: fixed;left: 0;bottom:0;"></a>
       </div>
       <script>
@@ -164,6 +171,7 @@
         }
         function closeNav() {
           document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("moreIcon").style.display = "block";
         }
       </script>
     </body>
